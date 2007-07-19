@@ -1,0 +1,518 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0023)http://www26.meebo.com/ -->
+<HTML><HEAD><TITLE>meebo.com</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=UTF-8"><LINK 
+href="meebo_com_files/meebo_v13.css" type=text/css rel=stylesheet>
+<SCRIPT type=text/javascript>  var gFlashinstalled = 0; var gFlashversion = 0; MSDetect = "false"; if (navigator.plugins && navigator.plugins.length) { x = navigator.plugins["Shockwave Flash"]; if (x) { gFlashinstalled = 2; if (x.description) { y = x.description; gFlashversion = y.charAt(y.indexOf('.')-1); } } else gFlashinstalled = 1; if (navigator.plugins["Shockwave Flash 2.0"]) { gFlashinstalled = 2; gFlashversion = 2; } } else if (navigator.mimeTypes && navigator.mimeTypes.length) { x = navigator.mimeTypes['application/x-shockwave-flash']; if (x && x.enabledPlugin) gFlashinstalled = 2; else gFlashinstalled = 1; } else MSDetect = "true"; //MSDetect is a common boolean variable set between the JS and VB scripts in case VB has to do the detection </SCRIPT>
+
+<SCRIPT language=VBScript src="meebo_com_files/detect.vb" 
+type=text/vbscript></SCRIPT>
+
+<SCRIPT src="meebo_com_files/language.js" type=text/javascript></SCRIPT>
+
+<SCRIPT src="meebo_com_files/meebo_v13.js" type=text/javascript></SCRIPT>
+
+<SCRIPT type=text/javascript> var lang = loadCookie('lang'); var url = document.location.href; if (lang && (url.indexOf(lang) == -1)) document.location.href=lang; </SCRIPT>
+<NOSCRIPT>
+<META content="MSHTML 6.00.2900.2180" name=GENERATOR></HEAD>
+<BODY id=body onblur=gBrowser.setUnfocus(); onresize=gWindowMgr.redraw(); 
+onfocus=gBrowser.setFocus(); onload=initLogon();>
+<DIV class=noscript><BR><BR><B>JavaScript required to sign in.</B><BR><BR>Meebo 
+requires JavaScript to sign in. This web browser does not support JavaScript or 
+scripts are being blocked.<BR><BR>To find out whether your browser supports 
+JavaScript or to allow scripts, see the browser's online 
+help.<BR><BR></DIV></NOSCRIPT><IMG class=meebologo id=meebologo 
+src="meebo_com_files/bg.gif" border=0>
+<DIV class=meeboalert id=meeboalert></DIV>
+<TABLE class=meebologon id=meebologon cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR style="HEIGHT: 20px">
+    <TD align=right colSpan=2><SPAN id=joinText 
+      style="CURSOR: pointer; COLOR: #ffffff; TEXT-ALIGN: right; TEXT-DECORATION: underline" 
+      onclick=gWindowMgr.createJoinDlg();>join meebo today! </SPAN></TD></TR>
+  <TR>
+    <TD id=meeboidtd style="PADDING-LEFT: 2px" align=left>&nbsp;meebo 
+      id:&nbsp; </TD>
+    <TD align=right><INPUT class=meebologoninput 
+      onkeypress="if (gLogon){return gLogon.onKeyPress(event, this);} else return false;" 
+      id=meebo style="WIDTH: 118px" tabIndex=1 size=16 autocomplete="off"> 
+</TD></TR>
+  <TR style="HEIGHT: 4px">
+    <TD colSpan=2></TD></TR>
+  <TR>
+    <TD id=meebopasstd style="PADDING-LEFT: 2px" 
+      align=left>&nbsp;Password:&nbsp; </TD>
+    <TD align=right><INPUT class=meebologoninput 
+      onkeypress="if (gLogon){return gLogon.onKeyPress(event, this);}else return false;" 
+      id=meebopassword style="WIDTH: 118px" tabIndex=2 type=password size=16 
+      autocomplete="off"> </TD></TR>
+  <TR>
+    <TD style="COLOR: #000000; PADDING-TOP: 1px" align=right colSpan=2><SPAN 
+      style="FLOAT: left; HEIGHT: 20px"><INPUT id=rememberme type=checkbox 
+      autocomplete="off"></SPAN><SPAN id=remText 
+      onmouseover="this.style.textDecoration='underline';" 
+      style="FONT-WEIGHT: normal; FLOAT: left; WIDTH: 80px; CURSOR: pointer; COLOR: #677788; PADDING-TOP: 3px; TEXT-ALIGN: left" 
+      onclick="$('rememberme').checked = ($('rememberme').checked) ? false : true;" 
+      onmouseout="this.style.textDecoration='none';">remember me</SPAN> <SPAN 
+      onkeypress="if (gLogon){return gLogon.onKeyPress(event, this);}else return false;" 
+      id=signOnText 
+      onmouseover="this.style.textDecoration='underline'; $('signonimg').src='skin/default/img/signon_hot.gif'" 
+      style="CURSOR: pointer; COLOR: #ffffff; POSITION: relative; TEXT-ALIGN: right" 
+      onclick=gLogon.sendVerifyUser(); tabIndex=3 
+      onmouseout="this.style.textDecoration='none'; $('signonimg').src='skin/default/img/signon.gif'">Sign 
+      On!&nbsp;<SPAN style="POSITION: relative; TOP: 1px"><IMG id=signonimg 
+      src="meebo_com_files/signon.gif"></SPAN></SPAN> </TD></TR></TBODY></TABLE>
+<DIV class=meeboconsole id=meeboconsole></DIV><!-- begin rounded rect for alert box -->
+<DIV class=logonalert id=logonalert>
+<DIV class=roundedRect-nw style="WIDTH: 370px">
+<DIV class=roundedRect-ne></DIV></DIV>
+<DIV class=roundedRect-e>
+<DIV class=roundedRect-w>
+<DIV class=roundedRect-content 
+style="PADDING-TOP: 15px; TEXT-ALIGN: center"><SPAN class=logoncaption 
+id=logonalerttext 
+style="FONT-SIZE: 14px; HEIGHT: 30px; BACKGROUND-COLOR: #ffffff"></SPAN></DIV></DIV></DIV>
+<DIV class=roundedRect-sw style="WIDTH: 370px">
+<DIV class=roundedRect-se></DIV></DIV></DIV><!-- end of alert box --><!-- buddy -->
+<DIV class=buddycontent id=buddycontent><!-- start of toolbar code -->
+<DIV class=uiToolbar id=blToolbar style="HEIGHT: 30px" btnH="26" btnW="32" 
+control="ui.toolbar">
+<DIV class=uiToolbarButton id=blAddBuddy title="Add Buddy" 
+control="ui.toolbarButton" img="addBuddy.gif"></DIV>
+<DIV class=uiToolbarButton id=blRemoveBuddy title="Remove Buddy" 
+control="ui.toolbarButton" img="removeBuddy.gif"></DIV>
+<DIV class=uiToolbarButton id=blIMBuddy title="IM Buddy" 
+control="ui.toolbarButton" img="imbuddy.gif"></DIV>
+<DIV class=uiToolbarButton id=blMyMeeboBuddy title="My Meebo" 
+control="ui.toolbarButton" img="mymeebo.gif"></DIV></DIV><!-- end of toolbar code -->
+<DIV class=uiAwayHeaderOff id=buddyaway 
+onmouseover="this.className='uiAwayHeaderOn';" 
+onclick=gBuddyContent.getAway().showMenu(true); 
+onmouseout="this.className='uiAwayHeaderOff';">I'm available&nbsp;<IMG 
+src="meebo_com_files/arrow-bottom.gif" border=0></DIV><BR>
+<DIV class=buddies id=buddies control="ui.tree"></DIV><BR>
+<DIV class=buddytools id=buddytools>
+<TABLE height=16 cellSpacing=0 cellPadding=0 width=165 border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=center width=21><IMG class=uiSignImages title="Sign On" 
+      onclick=gWindowMgr.createSignOnWindow(); height=16 
+      src="meebo_com_files/newlogon.gif" width=16></TD>
+    <TD vAlign=center width=59>
+      <DIV class=uiSignOnOffLinks 
+      onmouseover="this.className='uiSignOnOnLinks';" 
+      onclick=gWindowMgr.createSignOnWindow(); 
+      onmouseout="this.className='uiSignOnOffLinks'" width="59">Sign On</DIV></TD>
+    <TD vAlign=center width=21><IMG class=uiSignImages id=logoffimg 
+      title=Logoff height=16 src="meebo_com_files/logoff.gif" width=16> </TD>
+    <TD vAlign=bottom align=left width=64>
+      <DIV class=uiSignOffOffLinks id=signoffmenu 
+      onmouseover="this.style.color='#A4B6C9';this.style.textDecoration='underline';" 
+      title=Logoff 
+      onmouseout="this.style.color='#666666';this.style.textDecoration='none';" 
+      control="uiMenuHeader" width="64" rowh="18" orientation="up" 
+      menushow="false" menuw="120" menualign="right" static="true" 
+      dropdownimg="arrow-bottom.gif"></DIV></TD></TR></TBODY></TABLE></DIV></DIV><!-- end of buddy --><!-- customized away message --><INPUT 
+class=hiddeninput 
+onkeypress="if (gBuddyContent){return gBuddyContent.getAway().onKeyPress(event);} return false;" 
+id=customizeaway size=16 autocomplete="off" width="100"> <!-- end of customized away message --><!-- buddy away menu -->
+<DIV class=buddyawayoptions id=buddyawayoptions 
+onblur=gBuddyContent.getAway().showMenu(false);>
+<DIV style="BACKGROUND-COLOR: #666666"><!-- shadow -->
+<DIV 
+style="BORDER-RIGHT: #c1d6eb 1px solid; BORDER-TOP: #c1d6eb 1px solid; RIGHT: 1px; BORDER-LEFT: #c1d6eb 1px solid; BOTTOM: 1px; BORDER-BOTTOM: #c1d6eb 1px solid; POSITION: relative; BACKGROUND-COLOR: #f0f4f8">
+<DIV class=uiAwayBorderMenuItemOff 
+onmouseover="this.className='uiAwayBorderMenuItemOn';" 
+onclick="gBuddyContent.getAway().hideMenu(); gBuddyContent.getAway().setAwayMessage('available', gLang.available);" 
+onmouseout="this.className='uiAwayBorderMenuItemOff';">&nbsp;I'm available</DIV>
+<DIV class=uiAwayBorderMenuItemOff 
+onmouseover="this.className='uiAwayBorderMenuItemOn';" 
+onclick="gBuddyContent.getAway().hideMenu(); gBuddyContent.getAway().setAwayMessage('invisible', gLang.invisible);" 
+onmouseout="this.className='uiAwayBorderMenuItemOff';">&nbsp;I'm invisible</DIV>
+<DIV class=uiAwayMenuItemOff onmouseover="this.className='uiAwayMenuItemOn'" 
+style="PADDING-TOP: 5px" 
+onclick="gBuddyContent.getAway().hideMenu(); gBuddyContent.getAway().setAwayMessage('away', gLang.imaway);" 
+onmouseout="this.className='uiAwayMenuItemOff';"><IMG 
+src="meebo_com_files/away.gif" align=middle> I'm away</DIV>
+<DIV class=uiAwayMenuItemOff onmouseover="this.className='uiAwayMenuItemOn'" 
+onclick="gBuddyContent.getAway().hideMenu(); gBuddyContent.getAway().setAwayMessage('away', gLang.rightBack);" 
+onmouseout="this.className='uiAwayMenuItemOff';"><IMG 
+src="meebo_com_files/away.gif" align=middle> I'll be right back</DIV>
+<DIV class=uiAwayMenuItemOff onmouseover="this.className='uiAwayMenuItemOn'" 
+onclick="gBuddyContent.getAway().hideMenu(); gBuddyContent.getAway().setAwayMessage('away', gLang.busy);" 
+onmouseout="this.className='uiAwayMenuItemOff';"><IMG 
+src="meebo_com_files/away.gif" align=middle> I'm busy</DIV>
+<DIV class=uiAwayMenuItemOff onmouseover="this.className='uiAwayMenuItemOn'" 
+onclick="gBuddyContent.getAway().hideMenu(); gBuddyContent.getAway().setAwayMessage('away', gLang.sleeping);" 
+onmouseout="this.className='uiAwayMenuItemOff';"><IMG 
+src="meebo_com_files/away.gif" align=middle> I'm sleeping</DIV>
+<DIV class=uiAwayMenuItemOff onmouseover="this.className='uiAwayMenuItemOn'" 
+style="PADDING-TOP: 5px" 
+onclick="gBuddyContent.getAway().hideMenu(); gBuddyContent.getAway().setAwayMessage('away', gLang.awayComputer);" 
+onmouseout="this.className='uiAwayMenuItemOff';"><IMG 
+src="meebo_com_files/away.gif" align=middle> I'm away from my computer</DIV>
+<DIV class=uiAwayMenuItemOff onmouseover="this.className='uiAwayMenuItemOn'" 
+style="PADDING-TOP: 5px" 
+onclick="gBuddyContent.getAway().hideMenu(); gBuddyContent.getAway().customizeMessage();" 
+onmouseout="this.className='uiAwayMenuItemOff';">&nbsp;<I>Customized 
+message...</I></DIV></DIV></DIV></DIV><!-- end of buddy away menu --><!-- begin rounded rect for logon -->
+<DIV class=logon id=logon>
+<DIV class=roundedRect-nw>
+<DIV class=roundedRect-ne></DIV></DIV>
+<DIV class=roundedRect-e>
+<DIV class=roundedRect-w>
+<DIV class=roundedRect-content style="WIDTH: 530px; HEIGHT: 280px"><!-- insert content here BEGINNING OF CONTENT -->
+<TABLE class=logoncontent id=logoncontent>
+  <TBODY>
+  <TR height="48%" width="100%">
+    <TD class=logoncell id=oscarlogoncell vAlign=top align=left width="49%" 
+    height="48%"><IMG height=25 alt=AIM src="meebo_com_files/aim_logo.gif" 
+      width=26 
+      border=0>&nbsp;<B>AIM</B>&nbsp;&nbsp;or&nbsp;&nbsp;<B>ICQ</B><SPAN 
+      class=logoncaption id=aimcaption></SPAN> 
+      <TABLE class=logontable width="100%">
+        <TBODY>
+        <TR>
+        <TR>
+          <TD id=oscarnametd align=right>Screen Name:</TD>
+          <TD align=left><INPUT 
+            onkeypress="if (gLogon){return gLogon.onKeyPress(event, this);}else return false;" 
+            id=aim style="WIDTH: 120px" tabIndex=4 size=16 
+        autocomplete="off"></TD></TR>
+        <TR align=right>
+          <TD id=oscarpasstd>Password:</TD>
+          <TD align=left><INPUT 
+            onkeypress="if (gLogon){return gLogon.onKeyPress(event, this);}else return false;" 
+            id=aimpassword style="WIDTH: 120px" tabIndex=5 type=password size=16 
+            autocomplete="off"></TD></TR>
+        <TR>
+          <TD align=left colSpan=2>
+            <P align=center><A class=fineprint 
+            href="http://www26.meebo.com/redirect.html?https://my.screenname.aol.com/_cqr/login/login.psp?sitedomain=my.screenname.aol.com&amp;authLev=2&amp;siteState=&amp;lang=en&amp;locale=us&amp;createSn=1" 
+            target=_blank>New User?</A> <A class=fineprint 
+            href="http://www26.meebo.com/redirect.html?http://www.aim.com/help_faq/forgot_password/password.adp?aolp=" 
+            target=_blank>Forgot your password?</A></P></TD></TR></TBODY></TABLE></TD>
+    <TD width="2%" height="100%" rowSpan=3></TD><!-- margin -->
+    <TD class=logoncell id=yahoologoncell vAlign=top align=left width="49%" 
+    height="48%"><IMG height=25 alt=Yahoo src="meebo_com_files/yahoo_logo.gif" 
+      width=26 border=0>&nbsp;<B>Yahoo! Messenger</B><SPAN class=logoncaption 
+      id=yahoocaption></SPAN> 
+      <TABLE class=logontable width="100%">
+        <TBODY>
+        <TR>
+        <TR>
+          <TD id=yahoonametd align=right>Yahoo! ID:</TD>
+          <TD align=left><INPUT 
+            onkeypress="if (gLogon){return gLogon.onKeyPress(event, this);}else return false;" 
+            id=yahoo style="WIDTH: 120px" tabIndex=6 size=16 
+          autocomplete="off"></TD></TR>
+        <TR align=right>
+          <TD id=yahoopasstd>Password:</TD>
+          <TD align=left><INPUT 
+            onkeypress="if (gLogon){return gLogon.onKeyPress(event, this);} else return false;" 
+            id=yahoopassword style="WIDTH: 120px" tabIndex=7 type=password 
+            size=16 autocomplete="off"></TD></TR>
+        <TR>
+          <TD align=left colSpan=2>
+            <P align=center><A class=fineprint 
+            href="http://www26.meebo.com/redirect.html?http://edit.yahoo.com/config/eval_register?.partner=&amp;.intl=us&amp;.src=pg&amp;.last=&amp;.redir_from=Messenger" 
+            target=_blank>New User?</A>&nbsp;&nbsp;<A class=fineprint 
+            href="http://www26.meebo.com/redirect.html?http://edit.yahoo.com/config/eval_forgot_pw?new=1&amp;.done=http://my.yahoo.com&amp;.src=pg&amp;partner=&amp;.partner=&amp;.intl=us&amp;pkg=&amp;stepid=&amp;.last=" 
+            target=_blank>Forgot your 
+password?</A></P></TD></TR></TBODY></TABLE></TD></TR>
+  <TR>
+    <TD width="100%" colSpan=3 height="4%"></TD></TR><!-- margin -->
+  <TR height="48%" width="100%">
+    <TD class=logoncell id=jabberlogoncell vAlign=top align=left width="49%" 
+    height="48%"><IMG height=25 alt=Jabber 
+      src="meebo_com_files/jabber_logo.gif" width=26 border=0><B>Jabber</B> or 
+      <B>GTalk</B><SPAN class=logoncaption id=jabbercaption></SPAN> 
+      <TABLE class=logontable width="100%">
+        <TBODY>
+        <TR>
+        <TR>
+          <TD id=jabbernametd align=right>Screen Name:</TD>
+          <TD align=left><INPUT 
+            onkeypress="if (gLogon){return gLogon.onKeyPress(event, this);}else return false;" 
+            id=jabber style="WIDTH: 120px" tabIndex=8 size=16 
+          autocomplete="off"></TD></TR>
+        <TR align=right>
+          <TD id=jabberpasstd>Password:</TD>
+          <TD align=left><INPUT 
+            onkeypress="if (gLogon){return gLogon.onKeyPress(event, this);}else return false;" 
+            id=jabberpassword style="WIDTH: 120px" tabIndex=9 type=password 
+            size=16 autocomplete="off"></TD></TR>
+        <TR>
+          <TD align=left colSpan=2>
+            <P align=center><A class=fineprint 
+            href="http://www26.meebo.com/redirect.html?http://www.jabber.org/user/" 
+            target=_blank>New User?</A>&nbsp;&nbsp;<A class=fineprint 
+            href="http://www26.meebo.com/redirect.html?http://www.jabber.org/user/userfaq.shtml#id2781088" 
+            target=_blank>Forgot your password?</A></P></TD></TR></TBODY></TABLE></TD>
+    <TD class=logoncell id=msnlogoncell vAlign=top align=left width="49%" 
+    height="48%"><IMG height=25 alt=MSN src="meebo_com_files/msn_logo.gif" 
+      width=26 border=0>&nbsp;<B>MSN</B><SPAN class=logoncaption 
+      id=msncaption></SPAN> 
+      <TABLE class=logontable width="100%">
+        <TBODY>
+        <TR>
+        <TR>
+          <TD id=msnnametd align=right>Email:</TD>
+          <TD align=left><INPUT 
+            onkeypress="if (gLogon){return gLogon.onKeyPress(event, this);}else return false;" 
+            id=msn style="WIDTH: 120px" tabIndex=10 size=16 
+          autocomplete="off"></TD></TR>
+        <TR align=right>
+          <TD id=msnpasstd>Password:</TD>
+          <TD align=left><INPUT 
+            onkeypress="if (gLogon){return gLogon.onKeyPress(event, this);}else return false;" 
+            id=msnpassword style="WIDTH: 120px" tabIndex=11 type=password 
+            size=16 autocomplete="off"></TD></TR>
+        <TR>
+          <TD align=left colSpan=2>
+            <P align=center><A class=fineprint 
+            href="http://www26.meebo.com/redirect.html?https://accountservices.passport.net/reg.srf?id=956&amp;id=956&amp;ru=http://messenger.msn.com/download/downloadx.aspx&amp;sl=1&amp;vv=310&amp;lc=1033" 
+            target=_blank>New User?</A>&nbsp;&nbsp;<A class=fineprint 
+            href="http://www26.meebo.com/redirect.html?https://accountservices.msn.com/uiresetpw.srf?lc=1033&amp;id=2" 
+            target=_blank>Forgot your 
+  password?</A></P></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><!-- end content END OF CONTENT	here --></DIV></DIV></DIV>
+<DIV class=roundedRect-sw>
+<DIV class=roundedRect-se></DIV></DIV>
+<DIV class=logonbtn id=logonbtn></DIV></DIV>
+<DIV id=buttonarea 
+style="Z-INDEX: 1; LEFT: 462px; VISIBILITY: hidden; POSITION: absolute; TOP: 417px"><INPUT 
+id=invisiblecheck tabIndex=12 type=checkbox autocomplete="off"><SPAN 
+class=fineprint 
+style="BOTTOM: 3px; WHITE-SPACE: nowrap; POSITION: relative">Sign on as 
+invisible</SPAN><SPAN style="LINE-HEIGHT: 5px"><BR><BR></SPAN><INPUT 
+onmouseup="gLogon.onMouseAction(this, 'up', event); gLogon.sendVerifyUser();" 
+onkeypress="if (gLogon){gLogon.onKeyPress(event, this);}else return false;" 
+onmousedown="gLogon.onMouseAction(this, 'down', event);" id=signon 
+onmouseover="gLogon.onMouseAction(this, 'enter', event);" title="Sign On" 
+style="LEFT: 3px; POSITION: relative" tabIndex=13 
+onmouseout="gLogon.onMouseAction(this, 'leave', event);" type=image 
+src="F:\meebo_com_files\signon(1).gif" border=0></DIV><!-- end of rounded rect here --><!-- window -->
+<DIV id=template 
+style="LEFT: 0px; VISIBILITY: hidden; WIDTH: 1px; POSITION: absolute; TOP: 0px; HEIGHT: 1px">
+<TABLE id=winTable onclick=getWindow(this).moveToTop(); height="100%" 
+cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR height=8>
+    <TD class=nw 
+      onmousedown="getWindow(this).resize(this.className, event);"><IMG 
+      class=imwin id=nwimg src="meebo_com_files/dis_nw.gif" border=0></TD>
+    <TD class=n 
+      onmousedown="getWindow(this).resize(this.className, event);"><IMG 
+      class=imwin id=nimg height=8 src="meebo_com_files/dis_n.png" width="100%" 
+      border=0></TD>
+    <TD class=ne 
+      onmousedown="getWindow(this).resize(this.className, event);"><IMG 
+      class=imwin id=neimg src="meebo_com_files/dis_ne.gif" border=0></TD></TR>
+  <TR height=21>
+    <TD class=w onmousedown="getWindow(this).resize(this.className, event);" 
+    height=21><IMG class=imwin id=barwimg src="meebo_com_files/dis_barw.png" 
+      border=0></TD>
+    <TD onmousedown=getWindow(this).move(event); id=windowbar 
+    ondblclick=getWindow(this).maximizeFromTitleBar();><IMG class=imwin 
+      id=barnimg height=21 src="meebo_com_files/dis_barn.png" width="100%" 
+      border=0>
+      <DIV class=caption id=caption>meebo.com</DIV>
+      <DIV class=btns id=btns><IMG 
+      onmouseup="getWindow(this).onMouseAction(this, 'up', event);" class=imwin 
+      onmousedown="getWindow(this).onMouseAction(this, 'down', event);" id=min 
+      onmouseover="getWindow(this).onMouseAction(this, 'enter', event);" 
+      onmouseout="getWindow(this).onMouseAction(this, 'leave', event);" 
+      src="meebo_com_files/min.gif" border=0><IMG 
+      onmouseup="getWindow(this).onMouseAction(this, 'up', event);" class=imwin 
+      onmousedown="getWindow(this).onMouseAction(this, 'down', event);" id=max 
+      onmouseover="getWindow(this).onMouseAction(this, 'enter', event);" 
+      onmouseout="getWindow(this).onMouseAction(this, 'leave', event);" 
+      src="meebo_com_files/max.gif" border=0><IMG 
+      onmouseup="getWindow(this).onMouseAction(this, 'up', event);" class=imwin 
+      onmousedown="getWindow(this).onMouseAction(this, 'down', event);" id=close 
+      onmouseover="getWindow(this).onMouseAction(this, 'enter', event);" 
+      onmouseout="getWindow(this).onMouseAction(this, 'leave', event);" 
+      src="meebo_com_files/close.gif" border=0></DIV></TD>
+    <TD class=e onmousedown="getWindow(this).resize(this.className, event);" 
+    height=21><IMG class=imwin id=bareimg src="meebo_com_files/dis_bare.png" 
+      border=0></TD></TR>
+  <TR>
+    <TD class=w 
+      onmousedown="getWindow(this).resize(this.className, event);"><IMG 
+      class=imwin id=wimg height="100%" src="meebo_com_files/dis_w.png" width=8 
+      border=0></TD>
+    <TD class=imbg width="100%" height="100%">&nbsp;</TD>
+    <TD class=e 
+      onmousedown="getWindow(this).resize(this.className, event);"><IMG 
+      class=imwin id=eimg height="100%" src="meebo_com_files/dis_e.png" width=8 
+      border=0></TD></TR>
+  <TR height=8>
+    <TD class=sw 
+      onmousedown="getWindow(this).resize(this.className, event);"><IMG 
+      class=imwin id=swimg src="meebo_com_files/dis_sw.gif" border=0></TD>
+    <TD class=s 
+      onmousedown="getWindow(this).resize(this.className, event);"><IMG 
+      class=imwin id=simg height=8 src="meebo_com_files/dis_s.png" width="100%" 
+      border=0></TD>
+    <TD class=se 
+      onmousedown="getWindow(this).resize(this.className, event);"><IMG 
+      class=imwin id=seimg src="meebo_com_files/dis_se.png" 
+  border=0></TD></TR></TBODY></TABLE></DIV>
+<DIV class=meebolinks id=meebolinks><A title=about 
+href="http://blog.meebo.com/?page_id=2" target=_blank alt="about"><SPAN 
+id=aboutlink><FONT color=white>about</FONT></SPAN></A> | <A title=forum 
+href="http://forum.meebo.com/" target=_blank alt="forum"><SPAN 
+id=forumlink><FONT color=white>forum</FONT></SPAN></A> | <A title=blog 
+href="http://blog.meebo.com/" target=_blank alt="blog"><SPAN id=bloglink><FONT 
+color=white>blog</FONT></SPAN></A> | <A title=privacy 
+href="http://blog.meebo.com/?page_id=19" target=_blank alt="privacy"><SPAN 
+id=privlink><FONT color=white>privacy policy</FONT></SPAN></A> | <A title=help 
+href="http://wiki.meebo.com/" target=_blank alt="help"><SPAN id=helplink><FONT 
+color=white>help</FONT></SPAN></A> <SPAN id=audiospace 
+style="VISIBILITY: hidden"><FONT color=white>| </FONT></SPAN>
+<DIV id=audiobtn 
+style="DISPLAY: inline; WIDTH: 31px; CURSOR: pointer; BOTTOM: 0px; POSITION: relative; HEIGHT: 19px" 
+control="uiButton" img="buttons/audio" width="19" imgPreload="true" 
+imgAlt="sound" imgH="19" imgW="31" base="gif" height="18"></DIV></DIV><!-- begin rounded rect for dialog -->
+<DIV class=dialog id=dialog>
+<TABLE id=dialog-table cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=dialog-nw width=10 height=10><IMG 
+      src="meebo_com_files/info-nw.gif" border=0></TD>
+    <TD class=dialog-n height=10></TD>
+    <TD class=dialog-ne width=10 height=10><IMG 
+      src="meebo_com_files/info-ne.gif" border=0></TD></TR>
+  <TR>
+    <TD class=dialog-e width=10></TD>
+    <TD class=dialog-content id=dialog-content-outer>
+      <DIV id=dialog-content></DIV></TD>
+    <TD class=dialog-w width=10></TD></TR>
+  <TR>
+    <TD class=dialog-sw width=10 height=10><IMG 
+      src="meebo_com_files/info-sw.gif" border=0></TD>
+    <TD class=dialog-s height=10></TD>
+    <TD class=dialog-se width=10 height=10><IMG 
+      src="meebo_com_files/info-se.gif" border=0></TD></TR></TBODY></TABLE></DIV><!-- end of rounded rect dialog -->
+<DIV class=copyright id=copyright><IMG src="meebo_com_files/secure.gif" 
+align=bottom>Passwords encrypted with 1024-bit RSA keys. Copyright 2005-2006 
+Meebo, Inc. All rights reserved.</DIV><!-- this is being cached for the offline reconnect scenario -->
+<DIV style="VISIBILITY: hidden"><IMG src="meebo_com_files/reconnect.gif"><IMG 
+src="meebo_com_files/reconnect_hot.gif"><IMG 
+src="meebo_com_files/reconnect_down.gif"></DIV><!-- interested in joining meebo?  we have full time and internship oppportunities available including front-end software engineer (JavaScript/DHTML/Ajax/C/C++), back-end software engineer (C/C++/networking/databases), and visual designer. email secretjobs at meebo dot com with your resume and cover letter.  thanks! -->﻿
+<DIV class=languagelinks id=languagelinks><SPAN 
+onmouseover="this.style.textDecoration='underline';" title=english 
+style="CURSOR: pointer" onclick="switchLanguage('/');" 
+onmouseout="this.style.textDecoration='none';" alt="english">English</SPAN> | 
+<SPAN onmouseover="this.style.textDecoration='underline';" 
+title=chinese_simplified style="CURSOR: pointer" 
+onclick="switchLanguage('index-zh-CN.html');" 
+onmouseout="this.style.textDecoration='none';" alt="chinese_simplified">中国话 
+</SPAN>| <SPAN onmouseover="this.style.textDecoration='underline';" 
+title=chinese_traditional style="CURSOR: pointer" 
+onclick="switchLanguage('index-ch.html');" 
+onmouseout="this.style.textDecoration='none';" alt="chinese_traditional">中國話 
+</SPAN>| <SPAN onmouseover="this.style.textDecoration='underline';" 
+title=croatian style="CURSOR: pointer" 
+onclick="switchLanguage('index-hr.html');" 
+onmouseout="this.style.textDecoration='none';" alt="croatian">hrvatski 
+jezik</SPAN> | <SPAN onmouseover="this.style.textDecoration='underline';" 
+title=danish style="CURSOR: pointer" onclick="switchLanguage('index-da.html');" 
+onmouseout="this.style.textDecoration='none';" alt="danish">Dansk </SPAN>| <SPAN 
+onmouseover="this.style.textDecoration='underline';" title=dutch 
+style="CURSOR: pointer" onclick="switchLanguage('index-nl-NL.html');" 
+onmouseout="this.style.textDecoration='none';" alt="dutch">Nederlands </SPAN>| 
+<SPAN onmouseover="this.style.textDecoration='underline';" title=filipino 
+style="CURSOR: pointer" onclick="switchLanguage('index-fil.html');" 
+onmouseout="this.style.textDecoration='none';" alt="filipino">Filipino </SPAN>| 
+<SPAN onmouseover="this.style.textDecoration='underline';" title=finnish 
+style="CURSOR: pointer" onclick="switchLanguage('index-fi.html');" 
+onmouseout="this.style.textDecoration='none';" alt="finnish">Suomi </SPAN>| 
+<SPAN onmouseover="this.style.textDecoration='underline';" title=french 
+style="CURSOR: pointer" onclick="switchLanguage('index-fr.html');" 
+onmouseout="this.style.textDecoration='none';" alt="french">Français </SPAN>| 
+<SPAN onmouseover="this.style.textDecoration='underline';" title=galician 
+style="CURSOR: pointer" onclick="switchLanguage('index-gl-ES.html');" 
+onmouseout="this.style.textDecoration='none';" alt="galician">Galego </SPAN>| 
+<SPAN onmouseover="this.style.textDecoration='underline';" title=german 
+style="CURSOR: pointer" onclick="switchLanguage('index-de.html');" 
+onmouseout="this.style.textDecoration='none';" alt="german">Deutsch</SPAN> | 
+<SPAN onmouseover="this.style.textDecoration='underline';" title=greek 
+style="CURSOR: pointer" onclick="switchLanguage('index-el.html');" 
+onmouseout="this.style.textDecoration='none';" alt="greek">Ελληνική </SPAN>| 
+<SPAN onmouseover="this.style.textDecoration='underline';" title=hebrew 
+style="CURSOR: pointer" onclick="switchLanguage('index-he.html');" 
+onmouseout="this.style.textDecoration='none';" alt="hebrew">Hebrew</SPAN> 
+<BR><SPAN onmouseover="this.style.textDecoration='underline';" title=hindi 
+style="CURSOR: pointer" onclick="switchLanguage('index-hi.html');" 
+onmouseout="this.style.textDecoration='none';" alt="hindi">हिन्दी</SPAN> | <SPAN 
+onmouseover="this.style.textDecoration='underline';" title=hungarian 
+style="CURSOR: pointer" onclick="switchLanguage('index-hu.html');" 
+onmouseout="this.style.textDecoration='none';" alt="hungarian">Magyar</SPAN> | 
+<SPAN onmouseover="this.style.textDecoration='underline';" title=indonesian 
+style="CURSOR: pointer" onclick="switchLanguage('index-id.html');" 
+onmouseout="this.style.textDecoration='none';" 
+alt="indonesian">Indonesian</SPAN> | <SPAN 
+onmouseover="this.style.textDecoration='underline';" title=italian 
+style="CURSOR: pointer" onclick="switchLanguage('index-it.html');" 
+onmouseout="this.style.textDecoration='none';" alt="italian">Italiano </SPAN>| 
+<SPAN onmouseover="this.style.textDecoration='underline';" title=japanese 
+style="CURSOR: pointer" onclick="switchLanguage('index-ja.html');" 
+onmouseout="this.style.textDecoration='none';" alt="japanese">日本語</SPAN> | <SPAN 
+onmouseover="this.style.textDecoration='underline';" title=korean 
+style="CURSOR: pointer" onclick="switchLanguage('index-ko.html');" 
+onmouseout="this.style.textDecoration='none';" alt="korean">한국어</SPAN> | <SPAN 
+onmouseover="this.style.textDecoration='underline';" title=leet 
+style="CURSOR: pointer" onclick="switchLanguage('index-leet.html');" 
+onmouseout="this.style.textDecoration='none';" alt="leet">l337</SPAN> | <SPAN 
+onmouseover="this.style.textDecoration='underline';" title=malaysian 
+style="CURSOR: pointer" onclick="switchLanguage('index-ms.html');" 
+onmouseout="this.style.textDecoration='none';" alt="malaysian">Bahasa 
+Melayu</SPAN> | <SPAN onmouseover="this.style.textDecoration='underline';" 
+title=norwegian style="CURSOR: pointer" 
+onclick="switchLanguage('index-nb-NO.html');" 
+onmouseout="this.style.textDecoration='none';" alt="norwegian">Norsk bokmål 
+</SPAN>| <SPAN onmouseover="this.style.textDecoration='underline';" 
+title=piglatin style="CURSOR: pointer" 
+onclick="switchLanguage('index-pi.html');" 
+onmouseout="this.style.textDecoration='none';" alt="piglatin">Igpay 
+Atinlay</SPAN> | <SPAN onmouseover="this.style.textDecoration='underline';" 
+title=portuguese_brazil style="CURSOR: pointer" 
+onclick="switchLanguage('index-pt-BR.html');" 
+onmouseout="this.style.textDecoration='none';" alt="portuguese_brazil">Português 
+Brasileiro</SPAN> <BR><SPAN onmouseover="this.style.textDecoration='underline';" 
+title=portuguese_portugal style="CURSOR: pointer" 
+onclick="switchLanguage('index-pt-PT.html');" 
+onmouseout="this.style.textDecoration='none';" 
+alt="portuguese_portugal">Português</SPAN> | <SPAN 
+onmouseover="this.style.textDecoration='underline';" title=romanian 
+style="CURSOR: pointer" onclick="switchLanguage('index-ro.html');" 
+onmouseout="this.style.textDecoration='none';" alt="romanian">Română</SPAN> | 
+<SPAN onmouseover="this.style.textDecoration='underline';" title=russian 
+style="CURSOR: pointer" onclick="switchLanguage('index-ru.html');" 
+onmouseout="this.style.textDecoration='none';" alt="russian">Русский </SPAN>| 
+<SPAN onmouseover="this.style.textDecoration='underline';" title=spanish 
+style="CURSOR: pointer" onclick="switchLanguage('index-es.html');" 
+onmouseout="this.style.textDecoration='none';" alt="spanish">Español</SPAN> | 
+<SPAN onmouseover="this.style.textDecoration='underline';" title=swahili 
+style="CURSOR: pointer" onclick="switchLanguage('index-sw.html');" 
+onmouseout="this.style.textDecoration='none';" alt="swahili">Kiswahili </SPAN>| 
+<SPAN onmouseover="this.style.textDecoration='underline';" title=swedish 
+style="CURSOR: pointer" onclick="switchLanguage('index-sv.html');" 
+onmouseout="this.style.textDecoration='none';" alt="swedish">Svenska </SPAN>| 
+<SPAN onmouseover="this.style.textDecoration='underline';" title=tamil 
+style="CURSOR: pointer" onclick="switchLanguage('index-ta.html');" 
+onmouseout="this.style.textDecoration='none';" alt="tamil">தமிழ்</SPAN> | <SPAN 
+onmouseover="this.style.textDecoration='underline';" title=telugu 
+style="CURSOR: pointer" onclick="switchLanguage('index-te.html');" 
+onmouseout="this.style.textDecoration='none';" alt="telugu">తెలుగు</SPAN> | 
+<SPAN onmouseover="this.style.textDecoration='underline';" title=turkish 
+style="CURSOR: pointer" onclick="switchLanguage('index-tr.html');" 
+onmouseout="this.style.textDecoration='none';" alt="turkish">Türkçe</SPAN> | 
+<SPAN onmouseover="this.style.textDecoration='underline';" title=ukranian 
+style="CURSOR: pointer" onclick="switchLanguage('index-uk.html');" 
+onmouseout="this.style.textDecoration='none';" alt="ukranian">Українська</SPAN> 
+| <SPAN onmouseover="this.style.textDecoration='underline';" title=vietnamese 
+style="CURSOR: pointer" onclick="switchLanguage('index-vi.html');" 
+onmouseout="this.style.textDecoration='none';" alt="vietnamese">tiếng 
+Việt</SPAN> </DIV></BODY></HTML>
