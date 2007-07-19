@@ -1,0 +1,58 @@
+a:active
+{
+	color: #996699;
+}
+a:link
+{
+	color: #3333FF;
+	text-decoration: none;
+}
+a:visited
+{
+	color: #333366;
+	text-decoration: none;
+}
+a:hover
+{
+	color: 0000CC;
+}
+
+BODY
+{
+	padding-right: 0px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+	margin: 0px;
+	padding-top: 0px;
+    font: Arial;
+}
+
+td 
+{
+	font-family: Times New Roman, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #000000;
+}
+
+.heading
+{
+	color:blue;
+	font-size:15px;
+	font-weight:bold;
+	text-decoration: none;
+}
+
+.buttonText 
+{
+	font-family: Timer New Roman, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #000000;
+}
+
+
+.dateformat .keyword 
+{
+	FLOAT: left; PADDING-LEFT: 15px; TEXT-ALIGN: center; WIDTH: 5em
+}
+
+

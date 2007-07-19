@@ -1,0 +1,88 @@
+
+<style type="text/css">
+
+
+body {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 14px;
+	color: #000000;
+}
+.Buton {
+	font-family: "Times New Roman", Times, serif;
+	color: #F06000;
+	background-color: #C9C9C9;
+	font-size: 10px;
+	padding: 0px;
+}
+.inputtext {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 14px;
+	color: #FF0000;
+	background-color: #CCCCCC;
+	height: 18px;
+	width: 100px;
+	border: thin inset #99CC99;
+}
+.table {
+	margin: 0px;
+	padding: 0px;
+	vertical-align: middle;
+	text-align: justify;
+	text-indent: 0px;
+	white-space: normal;
+	display: run-in;
+	word-spacing: 20px;
+}
+.list {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 14px;
+	color: #FF0000;
+	background-color: #CCCCCC;
+	height: 18px;
+	width: 100px;
+	border: thin ridge #99CC99;
+}
+.textcoppyright {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 16px;
+	color: #CCCCCC;
+	font-style: italic;
+}
+.tex_de_muc {
+	font-family: "Times New Roman", Times, serif;
+	color: #FF8000;
+	font-size: 16px;
+	font-style: normal;
+	text-decoration: none;
+	border: 10;
+}
+
+
+
+</style>
+
+<style type="text/css">
+
+a:link {
+	color: #000000;
+	font-weight: normal;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #000000;
+}
+a:hover {
+	text-decoration: none;
+	color: #0033CC;
+}
+a:active {
+	text-decoration: none;
+	color: #000000;
+}
+a {
+	font-weight: normal;
+}
+
+</style>
+
