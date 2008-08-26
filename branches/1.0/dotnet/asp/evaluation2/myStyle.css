@@ -1,0 +1,19 @@
+<style type="text/css">
+a:link 
+{
+	TEXT-DECORATION: none;
+}
+a:hover 
+{
+	TEXT-DECORATION: underline;
+}
+a:active 
+{
+	TEXT-DECORATION: underline;
+	COLOR: #00CCFF;
+}
+a 
+{
+	TEXT-DECORATION: none;
+}
+</style>

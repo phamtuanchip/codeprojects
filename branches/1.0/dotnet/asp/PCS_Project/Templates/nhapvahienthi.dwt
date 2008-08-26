@@ -1,0 +1,122 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>PCS</title>
+<!-- TemplateEndEditable -->
+<style type="text/css">
+<!--
+
+body {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 14px;
+	color: #000000;
+}
+.Buton {
+	font-family: "Times New Roman", Times, serif;
+	color: #F06000;
+	background-color: #C9C9C9;
+	font-size: 10px;
+	padding: 0px;
+}
+.inputtext {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 14px;
+	color: #FF0000;
+	background-color: #CCCCCC;
+	height: 18px;
+	width: 100px;
+	border: thin inset #99CC99;
+}
+.table {
+	margin: 0px;
+	padding: 0px;
+	vertical-align: middle;
+	text-align: justify;
+	text-indent: 0px;
+	white-space: normal;
+	display: run-in;
+	word-spacing: 20px;
+}
+.list {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 14px;
+	color: #FF0000;
+	background-color: #CCCCCC;
+	height: 18px;
+	width: 100px;
+	border: thin ridge #99CC99;
+}
+.textcoppyright {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 16px;
+	color: #CCCCCC;
+	font-style: italic;
+}
+.tex_de_muc {
+	font-family: "Times New Roman", Times, serif;
+	color: #FF8000;
+	font-size: 16px;
+	font-style: normal;
+	text-decoration: none;
+	border: 10;
+}
+
+
+-->
+</style>
+
+<!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+//-->
+</script>
+</head>
+
+<body leftmargin="0" topmargin="0" rightmargin="0" bottommargin="" onLoad="MM_preloadImages('../images/menu11.jpg','images/menu_lien_he_11.gif')">
+<div align="center">
+  <table width="301" height="100" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+      <td width="301"><div align="center">
+        <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="770" height="178">
+          <param name="movie" value="../images/logo.swf">
+          <param name="quality" value="high"><param name="LOOP" value="false">
+          <embed src="../images/logo.swf" width="770" height="178" loop="false" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash"></embed>
+        </object>
+        </div></td>
+    </tr>
+  </table>
+  <table width="770" height="34" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+      <td width="210" height="34" background="../images/n-m02.jpg">&nbsp;</td>
+      <td width="560" background="../images/n-m02.jpg"><div align="left"> </div></td>
+    </tr>
+  </table>
+  <table width="770" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+      <td width="10" bgcolor="#32aca8"><img src="../images/d-p01.gif" width="10" height="30"></td>
+    <td width="756"><p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p></td>
+      <td width="10" bgcolor="#32aca8"><img src="../images/d-p01.gif" width="10" height="30"></td>
+    </tr>
+  </table>
+  <table width="770" height="74" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+      <td height="74" background="../images/n-d01.jpg"><div align="center" class="textcoppyright">COPYRIGHT @ PCS GROUP C0411G<img src="../images/n-d01.jpg" width="10" height="70"></div></td>
+    </tr>
+  </table>
+</div>
+</body>
+</html>
