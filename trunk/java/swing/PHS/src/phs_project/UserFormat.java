@@ -24,6 +24,7 @@ public class UserFormat {
     public UserFormat() {
     }
     public String getFormat(Date date,String type){
+        date = new Date();
         String result = "";  
         Format fm;
         if(type.equals("ngay")){
