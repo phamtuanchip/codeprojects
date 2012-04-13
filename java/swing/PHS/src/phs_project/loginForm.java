@@ -243,15 +243,15 @@ public class loginForm extends javax.swing.JDialog {
         }
         else{
             login_count++;
-            if(login_count <= 3){
+            //if(login_count <= 3){
                 JOptionPane.showMessageDialog(this,"Liên kiết đến máy chủ thất bại");
                 txtUserName.setText("");
                 txtPassword.setText("");
                 txtUserName.requestFocus();
-            }
-            else{
-                System.exit(0);
-            }
+            //}
+           // else{
+             //   System.exit(0);
+           // }
         }
     }//GEN-LAST:event_btLoginActionPerformed
     
@@ -303,7 +303,7 @@ public int login(String username,String password){
     
    // private String sql;
     public static String user = "";
-    public static String server = "LOCALHOST";
+    public static String server = "192.168.1.10";
     private int login_count =0;
     private java.sql.Connection con = null;
     private java.sql.Statement st;

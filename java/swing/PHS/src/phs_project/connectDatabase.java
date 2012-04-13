@@ -14,7 +14,8 @@ public class connectDatabase{
                     }
 		}
 		catch(Exception e){
-			System.out.println ("khong connect duoc");
+			System.out.println ("khong connect duoc" );
+                        e.printStackTrace();
 		}
 		return con;
 	}
