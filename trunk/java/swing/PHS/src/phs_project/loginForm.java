@@ -228,8 +228,7 @@ public class loginForm extends javax.swing.JDialog {
     private void btLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLoginActionPerformed
 // TODO add your handling code here:
         server = txtServer.getText().trim();
-        int Result = 2;
-//login(txtUserName.getText(),txtPassword.getText());
+        int Result = login(txtUserName.getText(),txtPassword.getText());
         if(Result == 1){
             this.setVisible(false);
             hotelForm af = new hotelForm();
